@@ -5,7 +5,7 @@
 ## Example
 
 ```javascript
-const dontStop = require("dontStop");
+const dontStop = require("dontStop").default;
 
 const I = dontStop("I");
 
@@ -57,7 +57,7 @@ console.log(I.have.assets.name) // => undefined (because it's a user defined val
 - `DontStopProxy.name` This readonly property returns the name of the current 
     reference property (only if the property is set function, or is 
     auto-generated).
-- `DontStopProxy.someProp = someFunction` if you assign a function to a 
+- `DontStopProxy.someProp = someFunction` If you assign a function to a 
     property, which is not original set in `target`, the function will be 
     automatically wrapped by `dontStop` as `DontStopProxy`, so that it both can 
     be invoked and be chained.
