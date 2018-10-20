@@ -52,8 +52,8 @@ console.log(I.have.assets.name) // => undefined (because it's a user defined val
     semantic purpose, chaining properties with unlimited depth, even they hasn't
     been defined.
     - `name` Sets the top level name of the chain, used for prefixing property 
-        names. When passing `target` a named function, this argument is not 
-        necessary.
+        names. When passing `target` a named function or an object with `name` 
+        property, this argument is not necessary.
 - `DontStopProxy.name` This readonly property returns the name of the current 
     reference property (only if the property is set function, or is 
     auto-generated).
