@@ -1,0 +1,33 @@
+{
+  "name": "dontstop",
+  "version": "0.1.0",
+  "description": "A funny tool to call on an object via a semantic chain of unlimited depth.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyurl/dontstop.git"
+  },
+  "keywords": [
+    "infinity",
+    "chain"
+  ],
+  "author": "Ayon Lee <i@hyurl.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hyurl/dontstop/issues"
+  },
+  "homepage": "https://github.com/hyurl/dontstop#readme",
+  "dependencies": {
+    "js-magic": "^1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
+  "engines": {
+    "node": ">=6.0"
+  }
+}
