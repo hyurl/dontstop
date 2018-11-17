@@ -37,9 +37,9 @@ I.have.assets = {
 
 // check the 'name' property
 console.log(I.have.name); // => 'I.have' (because it's auto-generated object)
-console.log(I.have.hair); // => undefined (because it's a user defined value)
+console.log(I.have.hair.name); // => undefined (because it's a user-defined value)
 console.log(I.have.lunch.name) // => 'I.have.lunch' (bacause it's assigned function)
-console.log(I.have.assets.name) // => undefined (because it's a user defined value)
+console.log(I.have.assets.name) // => undefined (because it's a user-defined value)
 ```
 
 ## API

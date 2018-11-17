@@ -1,6 +1,6 @@
 {
   "name": "dontstop",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A funny tool to call on an object via a semantic chain of unlimited depth.",
   "main": "index.js",
   "types": "index.d.ts",
