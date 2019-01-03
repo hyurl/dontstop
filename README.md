@@ -54,9 +54,12 @@ console.log(I.have.assets.name) // => undefined (because it's a user-defined val
     - `name` Sets the top level name of the chain, used for prefixing property 
         names. When passing `target` a named function or an object with `name` 
         property, this argument is not necessary.
-- `DontStopProxy.name` This readonly property returns the name of the current 
+- `DontStopProxy.name` This read-only property returns the name of the current 
     reference property (only if the property is set function, or is 
     auto-generated).
+- `DontStopProxy.valueOf()` This method returns the primitive value of the 
+    current reference property (since you will always get a new proxy if the 
+    property has never assigned a value).
 - `DontStopProxy.someProp = someFunction` If you assign a function to a 
     property, which is not original set in `target`, the function will be 
     automatically wrapped by `dontStop` as `DontStopProxy`, so that it both can 

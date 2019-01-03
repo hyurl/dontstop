@@ -1,6 +1,7 @@
 export interface DontStopProxy {
     [x: string]: any;
     readonly name: string;
+    valueOf(): any;
 }
 
 export function dontStop(name: string): DontStopProxy;

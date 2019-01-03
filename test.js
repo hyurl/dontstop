@@ -10,7 +10,6 @@ describe("dontStop object", () => {
         obj.hello.world = "Hello, World!";
 
         assert.equal(typeof obj, "object");
-        console.log(obj.name);
         assert.equal(obj.name, "obj");
         assert.equal(obj.div.name, "obj.div");
         assert.equal(obj.div.times.name, "obj.div.times");

@@ -1,7 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+
 const { applyMagic } = require("js-magic");
 const target = Symbol("target");
 const properties = Symbol("properties");
 const expanded = Symbol("expanded");
+
+function valueOf(value) {
+    return value;
+}
 
 class DontStopProxy {
     constructor(name, _target) {
@@ -21,17 +28,24 @@ class DontStopProxy {
                 }
             }
 
-            return this[target][prop];
+            if (prop === "valueOf") {
+                return valueOf.bind(void 0, this[target]);
+            } else {
+                return this[target][prop];
+            }
         } else if (prop in this) {
-            return this[prop];
+            if (prop === "valueOf") {
+                return valueOf.bind(void 0, this[target]);
+            } else {
+                return this[prop];
+            }
         } else if (prop in this[properties]) {
             return this[properties][prop];
         } else if (typeof prop != "symbol") {
-            this[properties][prop] = new this.constructor(
+            return (this[properties][prop] = new this.constructor(
                 (this.name && `${this.name}.`) + String(prop),
                 void 0
-            );
-            return this[properties][prop];
+            ));
         }
     }
 
